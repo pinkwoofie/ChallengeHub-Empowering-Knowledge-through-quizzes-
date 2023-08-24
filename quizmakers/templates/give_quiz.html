@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+ {% block content %}
+
+ <div class="container is-widescreen">
+	<div class="notification ">
+		<form action="" method="POST">
+			{% csrf_token %}
+		<div class="field">
+			<label for ="code" class="label is-large"><h3>Have a Code</h3></label>
+			<div class="control has-icons-left has-icons-right">
+			  <input id="Inp" class="input is-large" name="code" placeholder="Write code">
+			 
+			</div>
+
+		</div>
+		<button  type="submit" class="button is-success">Go!</button>
+
+		</form>
+	 {%if value%}
+     <h1 style="color: red;">INVALID CODE</h1>
+	 {%endif%}
+	</div>
+  </div>
+  
+  <br/><br/>
+
+  <section class="section">
+	<h1 class="title">Try sample quiz</h1>
+	<h2 class="subtitle">
+	  A sample quiz for you all without any need of quiz code and without creating, any of the quiz .<br/>
+	  use code <strong>SampleQuiz</strong> for the sample quiz!
+
+	</h2>
+    
+  </section>
+ 
+  
+
+  
+  
+	{% endblock %}
